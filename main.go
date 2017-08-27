@@ -58,17 +58,17 @@ func sqrt(x float64) string {
 //	return z
 //}
 
-type Vetex struct {
-	X int
-	Y int
-}
-
-var (
-	v1 = Vetex{1,2}
-	v2 = Vetex{X: 1}
-	v3 = Vetex{}
-	p = &Vetex{1,2} // 类型为*Vetex
-)
+//type Vetex struct {
+//	X int
+//	Y int
+//}
+//
+//var (
+//	v1 = Vetex{1,2}
+//	v2 = Vetex{X: 1}
+//	v3 = Vetex{}
+//	p = &Vetex{1,2} // 类型为*Vetex
+//)
 
 var a[10]int
 
@@ -82,6 +82,31 @@ func printSlice(s string, x []int) {
 	fmt.Printf("%s len=%d cap=%d %v\n", s, len(x), cap(x), x)
 }
 var pow = []int{1, 2, 4, 8, 16, 32, 64, 128}
+
+type Vetex struct {
+	Lat, Long float64
+}
+
+//var m = map[string]Vetex {
+//"Bell Labs": Vetex{
+//40.68433, -74.39967,
+//},
+//"Google": Vetex{
+//37.42202, -122.08408,
+//},
+//}
+
+func compute(fn func(float64, float64) float64) float64 {
+	return  fn(3, 4)
+}
+
+func adder() func(int) int {
+	sum := 0
+	return func(x int) int {
+		sum += x
+		return sum
+	}
+}
 
 func main() {
 	//fmt.Println(add(111,222))
@@ -262,13 +287,44 @@ func main() {
 	//a = append(a, 2, 3, 4)
 	//printSlice("a", a)
 
-	for i := range pow {
-		pow[i] = 1 << uint(i)
+	//for i := range pow {
+	//	pow[i] = 1 << uint(i)
+	//}
+	//
+	//for _, v := range pow {
+	//	fmt.Print("2**%d = %d\n", i, v)
+	//}
+
+	//m = make(map[string]Vetex)
+	//m["Bell Labs"] = Vetex{
+	//	40.68433, -74.39967,
+	//}
+
+	//fmt.Println(m)
+
+	//m := make(map[string]int)
+	//m["Answer"] = 42
+	//fmt.Println("the value:", m["Answer"])
+	//m["Answer"] = 48
+	//fmt.Println("the value:", m["Answer"])
+	//delete(m, "Answer")
+	//fmt.Println("The value:", m["Answer"])
+
+//	hypot := func(x, y float64) float64 {
+//	return math.Sqrt(x*x + y*y)
+//}
+//	fmt.Println(hypot(5, 12))
+//	fmt.Println(compute(hypot))
+//	fmt.Println(compute(math.Pow))
+
+	pos, neg := adder(), adder()
+	for i := 0; i < 10; i++ {
+		fmt.Println(
+			pos(i),
+		    neg(-2*i),
+		)
 	}
 
-	for _, v := range pow {
-		fmt.Print("2**%d = %d\n", i, v)
-	}
 }
 
 
