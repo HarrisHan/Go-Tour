@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="586fb287-cb08-4030-b533-c4bca2404c0f" name="Default" comment="" />
+    <list default="true" id="586fb287-cb08-4030-b533-c4bca2404c0f" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,26 +21,14 @@
     <fileColor scope="Non-Project Files (Material Palenight)" color="2f2e43" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="main.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.go">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="concurrent.go" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/concurrent.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="322" column="19" lean-forward="true" selection-start-line="322" selection-start-column="19" selection-end-line="322" selection-end-column="19" />
+            <state relative-caret-position="318">
+              <caret line="118" column="5" lean-forward="true" selection-start-line="118" selection-start-column="5" selection-end-line="118" selection-end-column="5" />
               <folding>
-                <element signature="e#14#91#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="function.go" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/function.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="142" column="0" lean-forward="true" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
-              <folding>
-                <element signature="e#14#68#0" expanded="true" />
+                <element signature="e#14#47#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -69,6 +59,7 @@
         <option value="$PROJECT_DIR$/FirstMeet.go" />
         <option value="$PROJECT_DIR$/main.go" />
         <option value="$PROJECT_DIR$/function.go" />
+        <option value="$PROJECT_DIR$/concurrent.go" />
       </list>
     </option>
   </component>
@@ -79,10 +70,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="697" />
+    <option name="x" value="1264" />
     <option name="y" value="23" />
-    <option name="width" value="1005" />
-    <option name="height" value="725" />
+    <option name="width" value="1296" />
+    <option name="height" value="1259" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -138,7 +129,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Single File.go run function.go">
+  <component name="RunManager" selected="Go Single File.go run concurrent.go">
     <configuration name="Build main.go and run" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
       <module name="go" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -147,19 +138,26 @@
       <kind value="FILE" />
       <directory value="$PROJECT_DIR$/" />
     </configuration>
+    <configuration name="go run concurrent.go" type="GoRunFileConfiguration" factoryName="Go Single File" temporary="true">
+      <module name="go" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/concurrent.go" />
+    </configuration>
     <configuration name="go run function.go" type="GoRunFileConfiguration" factoryName="Go Single File" temporary="true">
       <module name="go" />
       <working_directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/function.go" />
     </configuration>
-    <list size="2">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Go Application.Build main.go and run" />
       <item index="1" class="java.lang.String" itemvalue="Go Single File.go run function.go" />
+      <item index="2" class="java.lang.String" itemvalue="Go Single File.go run concurrent.go" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Go Single File.go run function.go" />
-        <item index="1" class="java.lang.String" itemvalue="Go Application.Build main.go and run" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="Go Single File.go run concurrent.go" />
+        <item index="1" class="java.lang.String" itemvalue="Go Single File.go run function.go" />
+        <item index="2" class="java.lang.String" itemvalue="Go Application.Build main.go and run" />
       </list>
     </recent_temporary>
   </component>
@@ -176,19 +174,19 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="697" y="23" width="1005" height="725" extended-state="0" />
+    <frame x="1264" y="23" width="1296" height="1259" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24975124" sideWeight="0.48039216" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24691358" sideWeight="0.5043732" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41673782" sideWeight="0.49562684" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41758242" sideWeight="0.49562684" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.4869281" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.51960784" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3983539" sideWeight="0.49708456" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.51960784" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -225,7 +223,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="GoApplicationRunConfiguration">
@@ -240,6 +238,16 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/concurrent.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#14#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/FirstMeet.go" />
     <entry file="file:///usr/local/go/src/runtime/proc.go" />
     <entry file="file:///usr/local/go/src/runtime/asm_amd64.s" />
@@ -248,17 +256,18 @@
         <state relative-caret-position="122">
           <caret line="322" column="19" lean-forward="true" selection-start-line="322" selection-start-column="19" selection-end-line="322" selection-end-column="19" />
           <folding>
-            <element signature="e#14#91#0" expanded="true" />
+            <element signature="e#14#91#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/function.go">
+    <entry file="file://$PROJECT_DIR$/function.go" />
+    <entry file="file://$PROJECT_DIR$/concurrent.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="142" column="0" lean-forward="true" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
+        <state relative-caret-position="318">
+          <caret line="118" column="5" lean-forward="true" selection-start-line="118" selection-start-column="5" selection-end-line="118" selection-end-column="5" />
           <folding>
-            <element signature="e#14#68#0" expanded="true" />
+            <element signature="e#14#47#0" expanded="true" />
           </folding>
         </state>
       </provider>
