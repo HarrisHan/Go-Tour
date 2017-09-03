@@ -2,13 +2,44 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
-	
+
 	"net/http"
+	"time"
+	"gopkg.in/go-playground/validator.v8"
+	"reflect"
+	"github.com/gin-gonic/gin/binding"
 )
 
 type Login struct {
 	User string `form:"user" json:"user" binding:"required"`
 	Password string `form:"password" json:"password" binding:"required"`
+}
+
+type Booking struct {
+	CheckIn time.Time `form: "check_in" binding:"required,bookabledate" time_format:"2006-01-02"`
+	CheckOut time.Time `form: "check_out" binding: "required,gtfield=CheckIn" time_format:"2006-01-02"`
+}
+
+func bookableDate(
+v *validator.Validate, topStruct reflect.Value, currentStructOrField reflect.Value,
+field reflect.Value, fieldType reflect.Type, fieldKind reflect.Kind, param string,
+) bool {
+	if date, ok := field.Interface().(time.Time); ok {
+		today := time.Now()
+		if today.Year() > date.Year() || today.YearDay() > date.YearDay() {
+			return false
+		}
+	}
+	return  true
+}
+
+func getBookable(c *gin.Context) {
+	var b Booking
+	if err := c.ShouldBindWith(&b, binding.Query); err == nil {
+		c.JSON(http.StatusOK, gin.H{"message": "Booking dates are valid!"})
+	} else {
+		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+	}
 }
 
 func main() {
@@ -118,30 +149,36 @@ func main() {
 	//})
 	//
 
-	router.POST("/loginJSON", func(c *gin.Context) {
-		var json Login
-		if c.BindJSON(&json) == nil {
-			if json.User == "manu" && json.Password == "123" {
-				c.JSON(http.StatusOK, gin.H{"status": "unauthorized"})
-			} else {
-				c.JSON(http.StatusUnauthorized, gin.H{"status": "unauthorized"})
-			}
-		}
-	})
+	//router.POST("/loginJSON", func(c *gin.Context) {
+	//	var json Login
+	//	if c.BindJSON(&json) == nil {
+	//		if json.User == "manu" && json.Password == "123" {
+	//			c.JSON(http.StatusOK, gin.H{"status": "unauthorized"})
+	//		} else {
+	//			c.JSON(http.StatusUnauthorized, gin.H{"status": "unauthorized"})
+	//		}
+	//	}
+	//})
+	//
+	//// bingind a HTML form (user=manu&password=123)
+	//router.POST("/loginForm", func(c *gin.Context) {
+	//	var form Login
+	//	if c.Bind(&form) == nil {
+	//		if form.User == "manu" && form.Password == "123" {
+	//			c.JSON(http.StatusOK, gin.H{"status": "you are logged in"})
+	//		} else {
+	//			c.JSON(http.StatusUnauthorized, gin.H{"status": "unauthorized"})
+	//		}
+	//	}
+	//})
+	//
 
-	// bingind a HTML form (user=manu&password=123)
-	router.POST("/loginForm", func(c *gin.Context) {
-		var form Login
-		if c.Bind(&form) == nil {
-			if form.User == "manu" && form.Password == "123" {
-				c.JSON(http.StatusOK, gin.H{"status": "you are logged in"})
-			} else {
-				c.JSON(http.StatusUnauthorized, gin.H{"status": "unauthorized"})
-			}
-		}
-	})
+	binding.Validator.RegisterValidation("bookabledate", bookableDate)
+	router.GET("/boolable",getBookable)
 
 	router.Run(":8081")
+
+
 
 }
 
